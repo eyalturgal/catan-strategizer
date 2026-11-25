@@ -2,6 +2,14 @@
 
 Concepts that came up while building, in plain words. Newest session first.
 
+## 2026-11-25: Working from more than one computer
+
+**GitHub is the cloud copy.**
+Every finished step is committed and pushed, so GitHub always holds the latest code and docs. The project folder on a computer is a working copy. What GitHub doesn't hold on purpose: the `.venv` folder (rebuilt with one command) and game data (re-downloaded).
+
+**Push and pull.**
+Push sends your commits from a computer up to GitHub. Pull brings GitHub's latest down to a computer. Rule for two computers: push before you stop on one, pull before you start on the other. Python runs the same on Windows and Mac, so the project works on any computer with Python and Git. The README has the setup steps.
+
 ## 2026-11-25: Phase 1, step 1 (the board's shape)
 
 **Coordinates: giving every hex an address.**

@@ -19,6 +19,27 @@ python -m venv .venv
 
 The first line makes a private Python environment for this project in `.venv/` (like `node_modules`, it's never committed). The second installs the libraries listed in `requirements.txt` (like `package.json`), plus the project's own code.
 
+## Working on another computer
+
+The full project lives on GitHub, so any computer with Python 3.12 and Git can work on it.
+
+First time on that computer (in PowerShell, from the folder you want the project in):
+
+```powershell
+git clone https://github.com/eyalturgal/catan-strategizer.git
+cd catan-strategizer
+python -m venv .venv
+.venv\Scripts\python -m pip install -r requirements.txt
+```
+
+Every time after that, before starting work, get the latest from GitHub:
+
+```powershell
+git pull
+```
+
+And before stopping, make sure your work is pushed (Claude pushes after every step). On a Mac, use `.venv/bin/python` instead of `.venv\Scripts\python`.
+
 ## Everyday commands
 
 Run the tests:
