@@ -6,8 +6,8 @@ This file is the source of truth for where the project stands. Update it at the 
 
 ## Current status
 
-- **Current phase:** Phase 1 (Board model and probability). Phase 0 is done
-- **Next action:** Claude: plan the hex grid (first Phase 1 item) and show Eyal the plan. Alongside it, start the data hunt (top of Phase 2): Claude drafts the question about the missing dataset, Eyal posts it
+- **Current phase:** Phase 1 (Board model and probability), step 1 of 5 done. Plan approved by Eyal: grid, production math, harbors and distance rule, random boards, board view in the app
+- **Next action:** Claude: step 2 (what's on the board and what each spot produces). Alongside: the data hunt (Claude drafts the question about the missing dataset, Eyal posts it) and Eyal checks 5 to 10 Colonist boards for harbor positions and touching red numbers
 - **Blocked on:** nothing for Phase 1. The dataset download is still offline (see Phase 2)
 - **Last updated:** 2026-11-25
 
@@ -45,13 +45,14 @@ Each phase ends with something working and visible. Don't start the next phase u
 
 ### Phase 1: Board model and probability (no data needed)
 - [x] Dice odds by counting all 36 rolls (started in Phase 0 as the first test)
-- [ ] Hex grid in code: 19 hexes, 54 corners, 72 edges, and which ones touch
-- [ ] Tests: counts, each corner touches 1 to 3 hexes, adjacency works both ways
+- [x] Hex grid in code: 19 hexes, 54 corners, 72 edges, and which ones touch (`src/catan/board/grid.py`)
+- [x] Tests: counts, each corner touches 1 to 3 hexes, adjacency works both ways (15 tests in `tests/test_grid.py`)
 - [ ] Distance rule (which corners block which)
 - [ ] Ports: the 9 harbors and the corners that use them
 - [ ] Production per corner: pips and resources, total 58 pips on a standard board
 - [ ] Board scarcity: pips per resource on a given board
 - [ ] Random board generator that follows Colonist's setup rules (check the 6 and 8 rule)
+- [ ] Research Colonist's board rules: do harbors stay put, do red numbers ever touch? (Eyal looks at 5 to 10 boards; the data confirms later)
 - [ ] Board view in the app: draw a board, show production per spot, so Eyal can check a few by hand
 
 **Done when:** tests confirm 54 corners, 72 edges and correct adjacency; Eyal can open a random board in the app and the production numbers match what he counts himself.

@@ -2,6 +2,17 @@
 
 Concepts that came up while building, in plain words. Newest session first.
 
+## 2026-11-25: Phase 1, step 1 (the board's shape)
+
+**Coordinates: giving every hex an address.**
+Each hex gets two numbers, its row and its position along the row. With addresses, "who is next to this hex?" becomes simple arithmetic instead of something typed in by hand. The corners are then found from the shape itself: each hex has 6 corner points, and a point where 2 or 3 hexes meet counts as one corner. That's how 19 hexes x 6 corners = 114 corner points shrink to 54 real corners.
+
+**The board is a graph.**
+A graph is a set of things plus the connections between them. Here the things are the 54 corners (settlement spots) and the connections are the 72 edges (road spots). Most Catan rules are graph rules: the distance rule says no two settlements on connected corners, and a road network is a path through the graph.
+
+**Invariants: facts that must always be true.**
+Some numbers can be predicted before writing any code: 24 inland corners touch 3 hexes, 12 coastal corners touch 2, and 18 touch only 1. The coast has 30 corners and 30 edges, and 42 pairs of hexes touch. The tests check all of these. If a later change breaks the board, a test fails right away, instead of a strategy quietly coming out wrong weeks later.
+
 ## 2026-11-25: Setup
 
 **Git, GitHub and hosting are three different things.**

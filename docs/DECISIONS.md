@@ -53,3 +53,8 @@ Key decisions and why. Newest at the bottom. If a decision changes, add a new en
 - Live opening advice during a game: start with casual and private games. Before using it in ranked, Eyal asks Colonist support. Not breaking rules matters more to him than using it in ranked.
 - Later modules that read game data from Colonist itself (live tracker, importing games for post-game review) must be checked against the Terms' scraping and API rules before they're built.
 **Why:** the rule as written targets tools that play for you or reveal hidden information, which this isn't. But the rules don't address it directly, so we don't assume.
+
+### 2026-11-25: Board model: our own, built from the shape
+**Decision:** we build the board ourselves from its geometry (`src/catan/board/grid.py`) and number everything our way: hexes 0 to 18 row by row, corners 0 to 53 and edges 0 to 71 top to bottom, left to right. The dataset's numbering and Catanatron's get small translators later, checked on real games.
+**Options considered:** our own model (chosen), reusing Catanatron's board, copying the dataset's (x, y, z) corner format.
+**Why:** easiest to understand and test, and it doesn't depend on a simulator's internals or on a data format we can't see yet. Eyal's choice, 2026-11-25.
