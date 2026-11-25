@@ -6,9 +6,9 @@ This file is the source of truth for where the project stands. Update it at the 
 
 ## Current status
 
-- **Current phase:** Phase 0 (Setup and foundations), nearly done
-- **Next action:** Eyal: create an empty GitHub repo named `catan-strategizer` (steps in the Phase 0 notes). Claude then pushes the first commit. After that, Phase 1 (board model) and the data hunt (start of Phase 2) can run side by side
-- **Blocked on:** the dataset download is offline (see Phase 2)
+- **Current phase:** Phase 1 (Board model and probability). Phase 0 is done
+- **Next action:** Claude: plan the hex grid (first Phase 1 item) and show Eyal the plan. Alongside it, start the data hunt (top of Phase 2): Claude drafts the question about the missing dataset, Eyal posts it
+- **Blocked on:** nothing for Phase 1. The dataset download is still offline (see Phase 2)
 - **Last updated:** 2026-11-25
 
 ### Done so far
@@ -16,6 +16,7 @@ This file is the source of truth for where the project stands. Update it at the 
 - [x] Brief reviewed. Found: the dataset link is dead, Catanatron should come from GitHub, a similar tool exists (Catan Trainer)
 - [x] Decisions made: study mode first, classic Colonist settings, board model before data (see `docs/DECISIONS.md`)
 - [x] Project folder, docs, Python environment, first test, first commit
+- [x] Project on GitHub: https://github.com/eyalturgal/catan-strategizer (public). Eyal created the repo and signed this computer in to GitHub
 
 ---
 
@@ -31,7 +32,7 @@ Each phase ends with something working and visible. Don't start the next phase u
 - [x] Python environment set up, first test passes (dice odds)
 - [x] Hello page opens in the browser (command in the README)
 - [x] Git set up with a first commit
-- [ ] GitHub repo created by Eyal, first push by Claude
+- [x] GitHub repo created by Eyal, first push done (2026-11-25)
 - [x] Check Colonist's rules on outside tools in ranked games (result in `docs/DECISIONS.md`)
 
 **Eyal's steps to create the GitHub repo:**
