@@ -1,0 +1,11 @@
+# Libraries this project needs, pinned to the versions it was tested with.
+# Install with:
+#   .venv\Scripts\python -m pip install -r requirements.txt
+numpy==2.5.5
+pandas==3.1.1
+pyarrow==26.0.1
+pytest==9.2.0
+streamlit==1.67.0
+
+# The project's own code (src/catan), installed in editable mode
+-e .
